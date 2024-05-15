@@ -17,6 +17,7 @@ export const generateStaticParams = async () => {
     slug: post.slug,
   }));
 };
+// test commit
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
@@ -28,9 +29,7 @@ const PostPage = (props: any) => {
         <p className="mt-2 text-slate-400">{post.data.date}</p>
       </div>
 
-      <article
-        className="pb-8 prose prose-quoteless prose-neutral md:prose-lg dark:prose-invert prose-h2:font-kasei dark:prose-a:text-neutral-500"
-      >
+      <article className="pb-8 prose prose-quoteless prose-neutral md:prose-lg dark:prose-invert prose-h2:font-kasei dark:prose-a:text-neutral-500">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>
